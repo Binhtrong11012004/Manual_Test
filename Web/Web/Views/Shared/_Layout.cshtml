@@ -1,0 +1,263 @@
+﻿@using Web.Models;
+@{
+    HttpCookie cookie = Request.Cookies.Get("HoTenKhach");
+    string tenkhach = "";
+    if (cookie != null)
+    {
+        tenkhach = cookie.Value;
+    }
+}
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>BOOKING HOTEL</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The River template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" data-tag="font" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap" data-tag="font" />
+
+    <link href="~/Content/styles/reset.css" rel="stylesheet" />
+    <link href="~/Content/styles/style.css" rel="stylesheet" />
+    <link href="~/Content/styles/index.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="/Content/plugins/OwlCarousel2-2.3.4/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="/Content/plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="/Content/plugins/OwlCarousel2-2.3.4/animate.css">
+</head>
+<body>
+    <div class="home-container">
+        <div class="home-desktop1">
+            <header>
+                <div class="home-navigationbar">
+                    <div class="home-l-ogoinnavicationbar">
+                        <a href="/">
+                            <span class="home-text"><span>COOMI</span></span>
+                        </a>
+                    </div>
+                    <div class="home-frame21">
+                        <div class="home-frame19">
+                            <a href="/">
+                                <div class="home-frame20">
+                                    <div class="home-frame18">
+                                        <span class="home-text02 PlusJakartaSans16px:SemiBold">
+                                            <span>HOME</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                @if (ViewBag.Home == "active")
+                                {
+                                    <img alt="Rectangle7I242" src="/public/external/rectangle7i242-t1w8-200h.png" class="home-rectangle7" />
+                                }
+                            </a>
+                        </div>
+                        <div class="home-frame211">
+                            <a href="/rooms">
+                                <div class="home-frame201">
+                                    <div class="home-frame181">
+                                        <span class="home-text04 PlusJakartaSans16px:SemiBold">
+                                            <span>ROOM</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                @if (ViewBag.Rooms == "active")
+                                {
+                                    <img alt="Rectangle7I242" src="/public/external/rectangle7i242-t1w8-200h.png" class="home-rectangle7" />
+                                }
+                            </a>
+                        </div>
+                        <div class="home-frame22">
+                            <a href="/home/staff">
+                                <div class="home-frame202">
+                                    <div class="home-frame182">
+                                        <span class="home-text06 PlusJakartaSans16px:SemiBold">
+                                            <span>STAFF</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                @if (ViewBag.Staff == "active")
+                                {
+                                    <img alt="Rectangle7I242" src="/public/external/rectangle7i242-t1w8-200h.png" class="home-rectangle7" />
+                                }
+                            </a>
+                        </div>
+                        <div class="home-frame203">
+                            <a href="/home/about">
+                                <div class="home-frame204">
+                                    <div class="home-frame183">
+                                        <span class="home-text08 PlusJakartaSans16px:SemiBold">
+                                            <span>ABOUT</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                @if (ViewBag.About == "active")
+                                {
+                                    <img alt="Rectangle7I242" src="/public/external/rectangle7i242-t1w8-200h.png" class="home-rectangle7" />
+                                }
+                            </a>
+                        </div>
+                        @if (!string.IsNullOrEmpty(tenkhach))
+                        {
+                            <div class="home-frame203">
+                                <a href="/account/order">
+                                    <div class="home-frame204">
+                                        <div class="home-frame183">
+                                            <span class="home-text08 PlusJakartaSans16px:SemiBold">
+                                                <span>BOOKING INFO</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    @if (ViewBag.Order == "active")
+                                    {
+                                        <img alt="Rectangle7I242" src="/public/external/rectangle7i242-t1w8-200h.png" class="home-rectangle7" />
+                                    }
+                                </a>
+                            </div>
+                        }
+                    </div>
+                    @if (string.IsNullOrEmpty(tenkhach))
+                    {
+                        <div class="home-frame23">
+                            <button class="home-button">
+                                <div class="home-frame11">
+                                    <a href="/account/register">
+                                        <span class="home-text10 PlusJakartaSans16ps:SemiBoildUnderline">
+                                            <span>Sign up</span>
+                                        </span>
+                                </div>
+                            </button>
+                            <button class="home-button1">
+                                <div class="home-frame111">
+                                    <a href="/account/login">
+                                        <span class="home-text12 PlusJakartaSans16px:SemiBold">
+                                            <span>Log in</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </button>
+                        </div>
+                    }
+                    else
+                    {
+                        var chitetdatphongs = Session["ChiTietDonDatPhong"] as List<ChiTietDonDatPhong>;
+                        var count = 0;
+                        if (chitetdatphongs != null)
+                        {
+                            count = chitetdatphongs.Count();
+                        }
+
+                        <div class="page-frame43">
+                            <a href="/booking">
+                                <div class="page-iconparkoutlinebuy">
+                                    <div class="page-group2">
+                                        <img alt="VectorI162" src="/public/external/vectori162-y0b.svg" class="page-vector3">
+                                        <img alt="VectorI162" src="/public/external/vectori162-tqlm.svg" class="page-vector4">
+                                        <img alt="VectorI162" src="/public/external/vectori162-jdpg.svg" class="page-vector5">
+                                    </div>
+                                    @if (count > 0)
+                                    {
+                                        <span style="position: absolute; top: 27px; right: 12px; width: 20px; height: 20px; display: block; border-radius: 10px; background-color: red; text-align: center; color: white;">@count</span>
+                                    }
+                                </div>
+                            </a>
+                            <img alt="Line1I162" src="/public/external/line1i162-gxuw.svg" class="page-line1">
+                            <div class="page-frame93">
+                                <div class="page-frame42">
+                                    <div class="page-frame41">
+                                        <span class="page-text16 PlusJakartaSans20px:SemiBold">
+                                            <span>@(Server.UrlDecode(tenkhach))</span>
+                                        </span>
+                                    </div>
+                                    <div class="page-frame39">
+                                        <div class="page-frame40">
+                                            <span class="page-text18">
+                                                <a href="/account">
+                                                    <span>Update accout info</span>
+                                                </a>
+                                            </span>
+                                            <img alt="eparrowupboldI162" src="/public/external/eparrowupboldi162-4wj.svg" style="right: -5px; position: absolute; top: 2px;" class="page-eparrowupbold">
+                                        </div>
+                                    </div>
+                                </div>
+                                <img alt="Ellipse6I162" src="/public/external/ellipse6i162-dnda-200h.png" class="page-ellipse6">
+                            </div>
+                        </div>
+                    }
+                </div>
+            </header>
+
+            @RenderBody()
+        </div>
+    </div>
+    <footer>
+        <div class="home-down-navifationbar">
+            <div class="home-frame31">
+                <div class="home-frame28">
+                    <img alt="bxhomeI253" src="/public/external/bxhomei253-ihn8.svg" class="home-bxhome" />
+                    <span class="home-text14 PlusJakartaSans16px:SemiBoldItalic">
+                        <span>
+                            xx/x Hoang Hoa Tham Street, Binh Thanh District, Ho Chi Minh
+                        </span>
+                    </span>
+                </div>
+                <div class="home-frame27">
+                    <div class="home-mingcutephoneline">
+                        <div class="home-group">
+                            <img alt="VectorI253" src="/public/external/vectori253-d8qh.svg" class="home-vector" />
+                        </div>
+                    </div>
+                    <span class="home-text16 PlusJakartaSans16px:SemiBoldItalic">
+                        <span>0234.4344.XXX - 0928.000.XXX</span>
+                    </span>
+                </div>
+            </div>
+            <div class="home-frame29">
+                <a href="#">
+                    <img alt="cibfacebookI253" src="/public/external/cibfacebooki253-gj1g.svg" class="home-cibfacebook" />
+                </a>
+                <a href="#">
+                    <div class="home-tablermailfilled">
+                        <div>
+                            <img alt="VectorI253" src="/public/external/vectori253-v3ud.svg" class="home-vector1" />
+                            <img alt="VectorI253" src="/public/external/vectori253-4f.svg" class="home-vector2" />
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Content/plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
+    <script>
+        if ($('.home_slider').length) {
+            var homeSlider = $('.home_slider');
+            homeSlider.owlCarousel(
+                {
+                    items: 1,
+                    autoplay: true,
+                    loop: true,
+                    nav: true,
+                    smartSpeed: 1200
+                });
+        }
+        if ($('.room_slider').length) {
+            var roomSlider = $('.room_slider');
+            roomSlider.owlCarousel(
+                {
+                    items: 1,
+                    autoplay: true,
+                    loop: true,
+                    nav: true,
+                    smartSpeed: 1200
+                });
+        }
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

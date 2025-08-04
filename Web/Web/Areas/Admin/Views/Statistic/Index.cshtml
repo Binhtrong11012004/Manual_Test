@@ -1,0 +1,100 @@
+﻿@using Web.Areas.Admin.Controllers
+@model  ViewAllF
+    @{
+        ViewBag.Title = "Thống kê";
+        ViewBag.Controller = "Thống kê";
+        ViewBag.General = "active";
+        ViewBag.Statistic = "active";
+        Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+        ViewBag.Id = "view-null";
+    }
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">@ViewBag.Title</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <form method="get" action="/Admin/Report/Index">
+                        <table>
+                            <tr>
+                                <td style="padding:5px;">
+                                    Từ ngày:
+                                    @Html.TextBoxFor(x => x.TuNgay, new Dictionary<string, object>
+                                {
+                                    {"class", "form-control datetimepicker"}
+                                })
+                                    @Html.ValidationMessageFor(x => x.TuNgay)
+                                </td>
+                                <td style="padding:5px;">
+                                    Đến ngày:
+                                    @Html.TextBoxFor(x => x.DenNgay, new Dictionary<string, object>
+                                {
+                                    {"class", "form-control datetimepicker"}
+                                })
+                                    @Html.ValidationMessageFor(x => x.DenNgay)
+                                </td>
+                                <td style="padding:5px;">
+                                    <br />
+                                    <button type="submit" class="btn btn-info">Tìm kiếm</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <td>Lượt thuê phòng:</td>
+                                <td>@Model.TheoNgay.Sum(x => x.LuongPhong).Value.ToString("N0")</td>
+                            </tr>
+                            <tr>
+                                <td>Số khách thuê phòng:</td>
+                                <td>@Model.TheoNgay.Sum(x => x.LuongKhach).Value.ToString("N0")</td>
+                            </tr>
+                        </table>
+                        <i>Thống kê theo tháng</i>
+                        <hr />
+                        <table id="example2" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Thời gian</th>
+                                    <th>Lượt thuê phòng</th>
+                                    <th>Số khách thuê</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.TheoThang)
+                                {
+                                    <tr>
+                                        <td>@item.Ngay.Value.ToString("MM-yyyy")</td>
+                                        <td>@item.LuongPhong.Value.ToString("N0")</td>
+                                        <td>@item.LuongKhach.Value.ToString("N0")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <i>Thống kê theo ngày</i>
+                        <hr />
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Thời gian</th>
+                                    <th>Lượt thuê phòng</th>
+                                    <th>Số khách thuê</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.TheoNgay)
+                                {
+                                    <tr>
+                                        <td>@item.Ngay.Value.ToString("MM-dd-yyyy")</td>
+                                        <td>@item.LuongPhong.Value.ToString("N0")</td>
+                                        <td>@item.LuongKhach.Value.ToString("N0")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </form>
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->

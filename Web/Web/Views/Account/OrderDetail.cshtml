@@ -1,0 +1,184 @@
+﻿@model DonDatPhong
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/styles/booking-info-detail.css" rel="stylesheet" />
+
+<!-- ==========Event-Section========== -->
+<div class="your-booking-container" style=" margin-top: 112px;">
+    <div class="your-booking-your-booking">
+        <img alt="Rectangle152534" src="/public/external/rectangle152534-sewo-1100h.png" class="your-booking-rectangle15" />
+        <div class="your-booking-sumarybill">
+            <div class="your-booking-frame125">
+                <span class="your-booking-text PlusJakartaSans26px:Bold">
+                    <span>Booking information</span>
+                </span>
+                <div class="your-booking-frame143">
+                    @foreach (var item in Model.ChiTietDonDatPhongs)
+                    {
+                        <div class="your-booking-component10">
+                            <div class="your-booking-frame141">
+                                <span class="your-booking-text002 PlusJakartaSans26px:Bold">
+                                    <span>@item.Phong.TenPhong</span>
+                                </span>
+                                <div class="your-booking-frame142">
+                                    <img alt="Rectangle102534" src="@item.Phong.HinhAnh" class="your-booking-rectangle10" />
+                                    <div class="your-booking-frame140">
+                                        <div class="your-booking-frame50">
+                                            <img alt="fluentpeople20regular2534" src="/public/external/fluentpeople20regular2534-q5mi.svg" class="your-booking-fluentpeople20regular" />
+                                            <span class="your-booking-text004 PlusJakartaSans20px:Regular">
+                                                <span>@item.Phong.LoaiPhong.SoNguoi people</span>
+                                            </span>
+                                        </div>
+                                        <div class="your-booking-frame51">
+                                            <div class="your-booking-solarbedlinear">
+                                                <div class="your-booking-group">
+                                                    <img alt="Vector2534" src="/public/external/vector2534-miit.svg" class="your-booking-vector" />
+                                                    <img alt="Vector2534" src="/public/external/vector2534-8u4.svg" class="your-booking-vector01" />
+                                                    <img alt="Vector2534" src="/public/external/vector2534-ibsu.svg" class="your-booking-vector02" />
+                                                </div>
+                                            </div>
+                                            <span class="your-booking-text006 PlusJakartaSans20px:Regular">
+                                                <span>@item.Phong.LoaiPhong.SoGiuong Bed</span>
+                                            </span>
+                                        </div>
+                                        <div class="your-booking-frame52">
+                                            <img alt="streamlinetravelwayfinderstairs2stairsstaircaselef2534" src="/public/external/streamlinetravelwayfinderstairs2stairsstaircaselef2534-vaz.svg" class="your-booking-streamlinetravelwayfinderstairs2stairsstaircaselef" />
+                                            <span class="your-booking-text008 PlusJakartaSans20px:Regular">
+                                                <span>@item.Phong.ViTri</span>
+                                            </span>
+                                        </div>
+                                        <div class="your-booking-frame53">
+                                            <img alt="fluentmdl2money2534" src="/public/external/fluentmdl2money2534-t1.svg" class="your-booking-fluentmdl2money" />
+                                            <span class="your-booking-text010 PlusJakartaSans20px:Regular">
+                                                <span>@item.Phong.LoaiPhong.DonGia.Value.ToString("N0") VND</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="your-booking-bookinginfo">
+            <img alt="Line42534" src="/public/external/line42534-m1vy.svg" class="your-booking-line4" />
+            <div class="your-booking-frame132">
+                <div class="your-booking-frame64">
+                    <div class="your-booking-frame146">
+                        <span class="your-booking-text032 PlusJakartaSans16px:SemiBold">
+                            <span>Full Name</span>
+                        </span>
+                        <span class="your-booking-text034 PlusJakartaSans16px:Regular">
+                            <span>@Model.HoTen</span>
+                        </span>
+                    </div>
+                    <div class="your-booking-frame144">
+                        <span class="your-booking-text036 PlusJakartaSans16px:SemiBold">
+                            <span>Date check in</span>
+                        </span>
+                        <span class="your-booking-text038 PlusJakartaSans16px:Regular">
+                            <span>@Model.NgayDen.Value.ToString("dd/MM/yyyyy")</span>
+                        </span>
+                    </div>
+                    <div class="your-booking-frame145">
+                        <span class="your-booking-text040 PlusJakartaSans16px:SemiBold">
+                            <span>Date check out</span>
+                        </span>
+                        <span class="your-booking-text042 PlusJakartaSans16px:Regular">
+                            <span>@Model.NgayDi.Value.ToString("dd/MM/yyyyy")</span>
+                        </span>
+                    </div>
+                    <div class="your-booking-frame147">
+                        <span class="your-booking-text044 PlusJakartaSans16px:SemiBold">
+                            <span>Rooms</span>
+                        </span>
+                        <span class="your-booking-text046 PlusJakartaSans16px:Regular">
+                            @Model.ChiTietDonDatPhongs.Count()
+                        </span>
+                    </div>
+                    <div class="your-booking-frame148">
+                        <span class="your-booking-text047 PlusJakartaSans16px:SemiBold">
+                            <span>Pepople</span>
+                        </span>
+                        <span class="your-booking-text049 PlusJakartaSans16px:Regular">
+                            @Model.ChiTietDonDatPhongs.Sum(x => x.SoNguoi)
+                        </span>
+                    </div>
+                    <div class="your-booking-frame149">
+                        <span class="your-booking-text050 PlusJakartaSans16px:SemiBold">
+                            <span>Phone</span>
+                        </span>
+                        <span class="your-booking-text052 PlusJakartaSans16px:Regular">
+                            <span>@Model.SoDienThoai</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="your-booking-frame152">
+                    <span class="your-booking-text054 PlusJakartaSans16px:SemiBold">
+                        <span>Status</span>
+                    </span>
+                    <div class="your-booking-frame151">
+                        <div class="your-booking-frame150">
+                            <span class="your-booking-text056 PlusJakartaSans16px:SemiBold">
+                                <span>@Model.TrangThai</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="your-booking-frame129">
+                    @foreach (var item in Model.ChiTietDonDatPhongs)
+                    {
+                        <div class="your-booking-frame128">
+                            <div class="your-booking-frame127">
+                                <div class="your-booking-frame126">
+                                    <span class="your-booking-text060 PlusJakartaSans16px:SemiBold">
+                                        @item.SoNguoi
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="your-booking-text061 PlusJakartaSans20px:SemiBold">
+                                x
+                            </span>
+                            <span class="your-booking-text062 PlusJakartaSans16px:SemiBold">
+                                <span>@item.Phong.LoaiPhong.SoGiuong Bed</span>
+                            </span>
+                            <span class="your-booking-text064 PlusJakartaSans16px:Regular">
+                                <span>@((item.Phong.LoaiPhong.DonGia.Value * item.SoNguoi.Value).ToString("N0")) VNĐ /night</span>
+                            </span>
+                        </div>
+                    }
+                </div>
+                <img alt="Line52534" src="/public/external/line52534-1xen.svg" class="your-booking-line5" />
+                <div class="your-booking-frame139">
+                    <div class="your-booking-frame130">
+                        <span class="your-booking-text072 PlusJakartaSans16px:Regular">
+                            <span>@((Model.NgayDi.Value - Model.NgayDen.Value).Days) days</span>
+                        </span>
+                        <span class="your-booking-text074 PlusJakartaSans16px:Regular">
+                            <span>@Model.ChiTietDonDatPhongs.Sum(x=>x.Phong.LoaiPhong.DonGia * x.SoNguoi).Value.ToString("N0") VNĐ/night</span>
+                        </span>
+                    </div>
+                    <div class="your-booking-frame1321">
+                        <span class="your-booking-text076 PlusJakartaSans20px:SemiBold">
+                            <span>TOTAL</span>
+                        </span>
+                        <span class="your-booking-text078 PlusJakartaSans20px:SemiBold">
+                            <span>@(((Model.NgayDi.Value - Model.NgayDen.Value).Days* Model.ChiTietDonDatPhongs.Sum(x => x.Phong.LoaiPhong.DonGia * x.SoNguoi).Value).ToString("N0")) VNĐ</span>
+                        </span>
+                    </div>
+                </div>
+                <span class="your-booking-text080 PlusJakartaSans12.8px:Regular">
+                    <span>
+                        On the check-in day, if you haven't taken the rooms yet, we
+                        will delete your booking. We will refund your booking fee if
+                        you have already paid. Thank you, and have a good day.
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

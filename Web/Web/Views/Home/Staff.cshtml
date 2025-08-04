@@ -1,0 +1,55 @@
+﻿@using Web.Models;
+@model List<TaiKhoan>
+@{
+    ViewBag.Staff = "active";
+}
+
+<link href="~/Content/styles/staff.css" rel="stylesheet" />
+
+<div class="staff-container" style=" margin-top: 112px;">
+    <div class="staff-desktop8">
+        <img alt="Rectangle88612" src="/public/external/rectangle88612-kgbub-1800h.png" class="staff-rectangle8" />
+        <img alt="Rectangle98612" src="/public/external/rectangle98612-ttpf-1800h.png" class="staff-rectangle9" />
+        <form class="staff-frame49" action="/home/staff" method="get">
+            <div class="staff-frame61">
+                <input class="staff-text PlusJakartaSans16px:SemiBold" name="search" placeholder="Searching" value="@ViewBag.Search" />
+            </div>
+            <button class="staff-button" type="submit">
+                <div class="staff-frame11">
+                    <im class="staff-text02 PlusJakartaSans16px:SemiBold">
+                        <span>Searching</span>
+                    </im>
+                </div>
+            </button>
+        </form>
+        <div class="staff-frame67">
+            <div class="staff-frame62">
+                <span class="staff-text08 PlusJakartaSans20px:SemiBoldItalic" style="width: 30%;">
+                    <span>Name</span>
+                </span>
+                <span class="staff-text10 PlusJakartaSans20px:SemiBoldItalic" style="width: 30%;">
+                    <span>Role</span>
+                </span>
+                <span class="staff-text12 PlusJakartaSans20px:SemiBoldItalic" style="width: 30%;">
+                    <span>Phone number</span>
+                </span>
+            </div>
+            <div class="staff-frame64">
+                @foreach (var item in Model)
+                {
+                    <div class="staff-frame63">
+                        <span class="staff-text14 PlusJakartaSans16px:Regular" style="width: 30%;">
+                            <span>@item.HoTen</span>
+                        </span>
+                        <span class="staff-text16 PlusJakartaSans16px:Regular" style="width: 30%;">
+                            <span>@item.PhanQuyen.TenQuyen</span>
+                        </span>
+                        <span class="staff-text18 PlusJakartaSans16px:Regular" style="width: 30%;">
+                            <span>@item.SDT</span>
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

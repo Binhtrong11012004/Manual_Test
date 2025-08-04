@@ -1,0 +1,62 @@
+﻿@model DangNhapMeta
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Đăng nhập | AdminWeb</title>
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="/Areas/Admin/Content/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/Areas/Admin/Content/plugins/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="/Areas/Admin/Content/plugins/ionicons-2.0.1/css/ionicons.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/Areas/Admin/Content/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/Areas/Admin/Content/customer.css" />
+</head>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="/Admin/Home"><b>Admin</b>Web</a>
+        </div>
+        <div class="login-box-body">
+            <p class="login-box-msg">Đăng nhập quản trị</p>
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl, Areas = "Admin" }, FormMethod.Post, new { }))
+            {
+                <div class="form-group has-feedback">
+                    @Html.TextBoxFor(x => x.TaiKhoan, new { @class = "form-control", @placeholder = "Tài khoản" })
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                @Html.ValidationMessageFor(x => x.TaiKhoan)
+                <div class="form-group has-feedback">
+                    @Html.PasswordFor(x => x.MatKhau, new { @class = "form-control", @placeholder = "Mật khẩu" })
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                @Html.ValidationMessageFor(x => x.MatKhau)
+                <div class="row">
+                    <div class="col-xs-8">
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Đăng nhập</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery-3.1.0.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/ClientScripts/mvcfoolproof.unobtrusive.min.js"></script>
+</body>
+</html>

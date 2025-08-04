@@ -1,0 +1,57 @@
+﻿@model QuyenMeta
+@Html.HiddenFor(x => x.MaQuyen)
+
+<div class="box-body">
+    @if (Model.MaQuyen > 0)
+    {
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Tên quyền</label>
+            <div class="col-sm-9">
+                @Html.TextBoxFor(x => x.TenQuyen, new Dictionary<string, object>
+                {
+                    {"class", "form-control"},
+                    {"readonly","true"}
+                })
+                @Html.ValidationMessageFor(x => x.TenQuyen)
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Tên quyền</label>
+            <div class="col-sm-9">
+                @Html.TextBoxFor(x => x.TenQuyen, new Dictionary<string, object>
+                {
+                    {"class", "form-control"}
+                })
+                @Html.ValidationMessageFor(x => x.TenQuyen)
+            </div>
+        </div>
+    }
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Danh sách quyền</label>
+        <div class="col-sm-9">
+            @Html.ListBoxFor(x => x.DanhSach, new List<SelectListItem>
+            {
+                new SelectListItem { Value = "Quyền", Text = "Quyền" },
+                new SelectListItem { Value = "Tài khoản", Text = "Tài khoản" },
+                new SelectListItem { Value = "Khách hàng", Text = "Khách hàng" },
+                new SelectListItem { Value = "Tin tức", Text = "Tin tức" },
+                new SelectListItem { Value = "Khách sạn", Text = "Khách sạn" },
+                new SelectListItem { Value = "Loại phòng", Text = "Loại phòng" },
+                new SelectListItem { Value = "Phòng", Text = "Phòng" },
+                new SelectListItem { Value = "Dịch vụ", Text = "Dịch vụ" },
+                new SelectListItem { Value = "Đơn đặt phòng", Text = "Đơn đặt phòng" },
+                new SelectListItem { Value = "Book phòng", Text = "Book phòng" },
+                new SelectListItem { Value = "Hóa đơn", Text = "Hóa đơn" },
+                new SelectListItem { Value = "Báo cáo", Text = "Báo cáo" },
+                new SelectListItem { Value = "Thống kê", Text = "Thống kê" }
+            }, new Dictionary<string, object>
+            {
+                {"class", "form-control"}
+            })
+            @Html.ValidationMessageFor(x => x.DanhSach)
+        </div>
+    </div>
+</div>

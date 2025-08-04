@@ -1,0 +1,133 @@
+﻿@model PhongKhachHang
+@{
+    ViewBag.Title = "Gọi DV Phòng: " + Model.Phong.TenPhong;
+    ViewBag.Controller = "Book Phòng";
+    ViewBag.General = "active";
+    ViewBag.Booking = "active";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Id = "view-null";
+
+    var db = new WebDatPhongEntities();
+
+    var list = new List<SelectListItem>();
+    foreach (var item in db.KhachHangs.ToList())
+    {
+        list.Add(new SelectListItem { Value = item.MaKhachHang + "", Text = item.SDT + " - " + item.HoTen });
+    }
+
+    var phong = db.Phongs.FirstOrDefault(x => x.MaPhong == Model.MaPhong);
+    var dichVu = db.DichVus.ToList();
+}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">@ViewBag.Title</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3>Danh sách dịch vụ</h3>
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Tên dịch vụ</th>
+                                    <th>Giá (VNĐ)</th>
+                                    <th>Tác vụ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in dichVu)
+                                {
+                                    <tr>
+                                        <td>@item.TenDichVu</td>
+                                        <td>@item.Gia.Value.ToString("N0")</td>
+                                        <td>
+                                            <a onclick="addService('@item.MaDichVu')" class="btn btn-info btn-sm">Gọi</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>Dịch vụ đã sử dụng</h3>
+                        <table id="example2" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Tên dịch vụ</th>
+                                    <th>Giá (VNĐ)</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiền</th>
+                                    <th class="w100">Tác vụ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.SuDungDichVus)
+                                {
+                                    <tr>
+                                        <td>@item.DichVu.TenDichVu</td>
+                                        <td>@item.DichVu.Gia.Value.ToString("N0")</td>
+                                        <td>@item.SoLuong</td>
+                                        <td>@Html.Raw((item.DichVu.Gia * item.SoLuong).Value.ToString("N0"))</td>
+                                        <td>
+                                            <a onclick="editService('@item.MaSuDungDichVu','@item.SoLuong')" class="btn btn-info btn-sm">Sửa</a>
+                                            <a href="/Admin/Booking/DeleteService/@item.MaSuDungDichVu" onclick="return confirm('Bạn chắc chắn muốn xóa mục đã chọn?')" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </div><!-- /.col -->
+</div><!-- /.row -->
+
+<div id="themDichVu" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form method="post" action="/Admin/Booking/AddService">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Thêm dịch vụ</h4>
+                </div>
+                <div class="modal-body">
+                    <input name="MaPhongKhachHang" hidden value="@Model.MaPhongKhachHang" />
+                    <input name="MaDichVu" id="MaDichVu" hidden />
+                    <p>Số lượng</p>
+                    <input name="SoLuong" class="form-control" value="1" type="number" required />
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Gọi</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="suaDichVu" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form method="post" action="/Admin/Booking/EditService">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sửa dịch vụ</h4>
+                </div>
+                <div class="modal-body">
+                    <input name="MaSuDungDichVu" id="MaSuDungDichVu" hidden />
+                    <p>Số lượng</p>
+                    <input name="SoLuong" id="SoLuong" class="form-control" type="number" required />
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Cập nhật</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,133 @@
+﻿@model DonDatPhong
+@{
+    ViewBag.Title = "Đơn đặt phòng: " + Model.MaDonDatPhong;
+    ViewBag.Controller = "Đơn đặt phòng";
+    ViewBag.General = "active";
+    ViewBag.Order = "active";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Id = "view-null";
+}
+
+<div class="row">
+    <!-- left column -->
+    <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">@ViewBag.Title</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <div class="form-horizontal">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Ngày đặt:</label>
+                        <div class="col-sm-9">
+                            <label class="control-label text-left">@Model.NgayDatPhong.Value.ToString("dd/MM/yyyy")</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Ngày đến:</label>
+                        <div class="col-sm-9">
+                            <label class="control-label text-left">@Model.NgayDen.Value.ToString("dd/MM/yyyy")</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Ngày đi:</label>
+                        <div class="col-sm-9">
+                            <label class="control-label text-left">@Model.NgayDi.Value.ToString("dd/MM/yyyy")</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Trạng thái:</label>
+                        <div class="col-sm-9">
+                            <label class="control-label text-left">@Model.TrangThai</label>
+                        </div>
+                    </div>
+                    @if (Model.NgaySuLy != null)
+                    {
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Ngày sử lý:</label>
+                            <div class="col-sm-9">
+                                <label class="control-label text-left">@Model.NgayDi.Value.ToString("dd/MM/yyyy")</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Người xử lý:</label>
+                            <div class="col-sm-9">
+                                <label class="control-label text-left">@Model.TaiKhoan.HoTen</label>
+                            </div>
+                        </div>
+                    }
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"></label>
+                        <div class="col-sm-9">
+                            <a href="/Admin/Order/UpdateStatus?ma=@Model.MaDonDatPhong&trangthai=Xác nhận đặt phòng" class="btn btn-info">Xác nhật đặt phòng</a>
+                            <a href="/Admin/Order/UpdateStatus?ma=@Model.MaDonDatPhong&trangthai=Nhận phòng" class="btn btn-success">Nhận phòng</a>
+                            <a href="/Admin/Order/UpdateStatus?ma=@Model.MaDonDatPhong&trangthai=Hủy" class="btn btn-danger">Hủy</a>
+                        </div>
+                    </div>
+                    <h4>Thông tin khách đặt hàng</h4>
+                    <hr />
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Họ tên:</label>
+                        <div class="col-sm-9">
+                            <label class="control-label text-left">@Model.HoTen</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">SĐT:</label>
+                        <div class="col-sm-9">
+                            <label class="control-label text-left">@Model.SoDienThoai</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Email:</label>
+                        <div class="col-sm-9">
+                            <label class="control-label text-left">@Model.Email</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Ghi chú:</label>
+                        <div class="col-sm-9">
+                            <label class="control-label text-left">@Model.GhiChu</label>
+                        </div>
+                    </div>
+                    <hr />
+                    <h3>
+                        <i>Chi tiết đơn đặt phòng</i>
+                        <a href="/Admin/Order/AddDetail/@Model.MaDonDatPhong" class="btn btn-success">Thêm chi tiết đơn hàng</a>
+                    </h3>
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Khách sạn</th>
+                                <th>Phòng</th>
+                                <th>Số người</th>
+                                <th class="w100">Tác vụ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.ChiTietDonDatPhongs)
+                            {
+                                <tr>
+                                    <td>@item.KhachSan.TenKhachSan</td>
+                                    <td>@item.Phong.TenPhong</td>
+                                    <td>@item.SoNguoi</td>
+                                    <td>
+                                        <a href="/Admin/Order/EditDetail/@item.MaChiTiet" class="btn btn-info btn-sm">Sửa</a>
+                                        <a href="/Admin/Order/DeleteDetail/@item.MaChiTiet" onclick="return confirm('Bạn chắc chắn muốn xóa mục đã chọn?')" class="btn btn-danger btn-sm">Xóa</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer">
+                    <a href="@Url.Action("Index")" class="btn btn-default pull-left">Danh sách</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

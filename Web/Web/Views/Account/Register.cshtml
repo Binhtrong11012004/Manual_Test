@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+<link href="~/Content/styles/sing-up.css" rel="stylesheet" />
+
+<div class="home-container" style=" margin-top: 112px;">
+    <div class="home-desktop1">
+        <div class="home-desktop11">
+            <img alt="Rectangle88617" src="/public/external/rectangle88617-whqd-800w.png" class="home-rectangle81" />
+            <div class="home-group2">
+                <span class="home-text042"><span>COOMI HOTEL</span></span>
+            </div>
+            <div class="home-frame78">
+                <form class="home-frame74" action="/account/register" method="post">
+                    <div class="home-frame72">
+                        <span class="home-text061 PlusJakartaSans40px:Regular">
+                            <span>SIGN UP</span>
+                        </span>
+                        <div class="home-frame71">
+                            <div class="home-frame69">
+                                <div class="home-frame68" style="padding:0;">
+                                    <input class="home-text081 PlusJakartaSans20px:Regular" style="padding:20px;" name="HoTen" placeholder="Fullname" required />
+                                </div>
+                                <div class="home-frame68" style="padding:0;">
+                                    <input class="home-text081 PlusJakartaSans20px:Regular" style="padding:20px;" type="email" name="Email" placeholder="Email" required />
+                                </div>
+                                <div class="home-frame691" style="padding:0;">
+                                    <input class="home-text10 PlusJakartaSans20px:Regular" style="padding:20px;" type="password" name="MatKhau" placeholder="Password" required />
+                                </div>
+                                <div class="home-frame70" style="padding:0;">
+                                    <input class="home-text121 PlusJakartaSans20px:Regular" style="padding:20px;" type="password" name="XacNhanMatKhau" placeholder="Password again" required />
+                                </div>
+                            </div>
+                            <div class="home-frame701" style="padding:10px;">
+                                <input type="checkbox" class="home-rectangle12" required />
+                                <span class="home-text14" style="text-align:left !important;">
+                                    <span class="home-text15">
+                                        By clicking here, I state that I have read and understood
+                                    </span>
+                                    <a href="#" style="color: #672d2d; text-decoration: underline">
+                                        the terms and conditions.
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-frame73">
+                        <button class="home-button" type="submit" style="cursor:pointer;">
+                            <div class="home-frame11">
+                                <span class="home-text17 PlusJakartaSans24px:ExtraBold">
+                                    <span>Sign up</span>
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+                    <p style="color: red;">@TempData["notice"]</p>
+                </form>
+                <div class="home-frame76">
+                    <span class="home-text19 PlusJakartaSans16px:Regular">
+                        <span>Or quick sign in with</span>
+                    </span>
+                    <div class="home-frame75">
+                        <a href="#">
+                            <img alt="uimgoogle1314" src="/public/external/uimgoogle1314-j888.svg" class="home-uimgoogle" />
+                        </a>
+                        <a href="#">
+                            <img alt="formkitfacebook1314" src="/public/external/formkitfacebook1314-uc8l.svg" class="home-formkitfacebook" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

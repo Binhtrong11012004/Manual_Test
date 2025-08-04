@@ -1,0 +1,163 @@
+﻿@using Web.Models
+@{
+    var db = new WebDatPhongEntities();
+
+    var dondatphong = new DonDatPhong();
+    if (Session["DonDatPhong"] != null)
+    {
+        dondatphong = Session["DonDatPhong"] as DonDatPhong;
+    }
+    else
+    {
+        dondatphong = null;
+    }
+
+    var chitetdatphongs = new List<ChiTietDonDatPhong>();
+    if (Session["ChiTietDonDatPhong"] != null)
+    {
+        chitetdatphongs = Session["ChiTietDonDatPhong"] as List<ChiTietDonDatPhong>;
+    }
+
+    var loaiPhongs = db.LoaiPhongs.ToList();
+    var kss = db.KhachSans.ToList();
+
+    var dondatphongA = new DonDatPhong();
+    if (Session["DonDatPhongA"] != null)
+    {
+        dondatphongA = Session["DonDatPhongA"] as DonDatPhong;
+    }
+    else
+    {
+        HttpCookie cookied = Request.Cookies.Get("MaKhach");
+        var ma = int.Parse(cookied.Value);
+        var kh = db.KhachHangs.FirstOrDefault(x => x.MaKhachHang == ma);
+
+        dondatphongA = new DonDatPhong
+        {
+            HoTen = kh.HoTen,
+            SoDienThoai = kh.SDT,
+            Email = kh.Email,
+        };
+    }
+}
+
+<link href="~/Content/styles/check-in.css" rel="stylesheet" />
+
+<div class="boking-now-container" style=" margin-top: 112px;">
+    <div class="boking-now-boking-now">
+        <img alt="Rectangle151652" src="/public/external/rectangle151652-uicm-1300h.png" class="boking-now-rectangle15" />
+        <div class="boking-now-sumarybill">
+            <div class="boking-now-frame125">
+                <span class="boking-now-text PlusJakartaSans26px:Bold">
+                    <span>CHECK-IN INFORMATION</span>
+                </span>
+                <form method="get" action="/booking/send">
+                    <div class="boking-now-frame118">
+                        <div class="boking-now-frame116">
+                            <div class="boking-now-frame117">
+                                <span class="boking-now-text02">
+                                    <span>FULL NAME</span>
+                                </span>
+                            </div>
+                            <div class="boking-now-frame61">
+                                <input class="boking-now-text04 PlusJakartaSans16px:SemiBold" name="hoten" required value="@dondatphongA.HoTen" placeholder="Type your full name" style="border:none; background-color:transparent;">
+                            </div>
+                        </div>
+                        <div class="boking-now-frame1171">
+                            <div class="boking-now-frame1172">
+                                <span class="boking-now-text06">
+                                    <span>PHONE NUMBER</span>
+                                </span>
+                            </div>
+                            <div class="boking-now-frame611">
+                                <input class="boking-now-text08 PlusJakartaSans16px:SemiBold" name="sdt" required value="@dondatphongA.SoDienThoai" placeholder="Type your phone number or your local phone number" style="border:none; background-color:transparent;">
+                            </div>
+                        </div>
+                        <div class="boking-now-frame1181">
+                            <div class="boking-now-frame1173">
+                                <span class="boking-now-text10"><span>Email</span></span>
+                            </div>
+                            <div class="boking-now-frame612">
+                                <input class="boking-now-text12 PlusJakartaSans16px:SemiBold" name="email" required value="@dondatphongA.Email" placeholder="Type your email" style="border:none; background-color:transparent;">
+                            </div>
+                        </div>
+                        <div class="boking-now-frame124">
+                            <span class="boking-now-text14"><span>DATE</span></span>
+                            <div class="boking-now-component3">
+                                <div class="boking-now-frame44">
+                                    <input type="date" class="boking-now-text16 PlusJakartaSans16px:SemiBold" required name="ngayden" placeholder="Check in" style="border:none; background-color:transparent;" />
+                                    <input type="date" class="boking-now-text18 PlusJakartaSans16px:SemiBold" required name="ngaydi" placeholder="Check out" style="border:none; background-color:transparent;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="sumitff"></button>
+                </form>
+            </div>
+        </div>
+        <div class="boking-now-bookinginfo">
+            <img alt="Line42534" src="/public/external/line42534-gbr.svg" class="boking-now-line4" />
+            <div class="boking-now-frame132">
+                <div class="boking-now-frame129">
+                    @foreach (var item in chitetdatphongs)
+                    {
+                        <img alt="Line52534" src="/public/external/line52534-p7kx.svg" class="boking-now-line5" />
+                        <div class="boking-now-frame128">
+                            <div class="boking-now-frame127" style="width:50%;">
+                                <form action="/booking/add" method="post">
+                                    <input type="hidden" name="khachsan" value="@item.Phong.MaKhachSan" />
+                                    <input type="hidden" name="maphong" value="@item.MaPhong" />
+                                    <div class="boking-now-frame126">
+                                        <input class="boking-now-text28 PlusJakartaSans20px:Regular" id="input_@item.MaPhong" name="songuoi" type="number" min="1" autocomplete="on" max="5" value="@item.SoNguoi" style="width:100%; background-color:transparent;" />
+                                    </div>
+                                    <button type="submit" id="sumitff_@item.MaPhong" style="display:none;"></button>
+                                </form>
+                            </div>
+                            <span class="boking-now-text29 PlusJakartaSans20px:SemiBold">
+                                <span>@item.Phong.LoaiPhong.SoGiuong Bed</span>
+                            </span>
+                        </div>
+                        <div class="boking-now-frame128">
+                            <span class="boking-now-text31 PlusJakartaSans20px:Regular">
+                                <span>@item.Phong.LoaiPhong.DonGia.Value.ToString("N0")</span>
+                            </span>
+                            <span class="boking-now-text31 PlusJakartaSans20px:Regular">
+                                <span>VNĐ /night</span>
+                            </span>
+                        </div>
+
+                        <script>
+                            var text = $("#input_@item.MaPhong");
+                            text.bind("change keyup", function () {
+                                 $("#sumitff_@item.MaPhong").click();
+                            });
+                        </script>
+                    }
+                </div>
+                <img alt="Line52534" src="/public/external/line52534-p7kx.svg" class="boking-now-line5" />
+                <div class="boking-now-frame130">
+                    <span class="boking-now-text33 PlusJakartaSans20px:SemiBold">
+                        <span>TOTAL</span>
+                    </span>
+                    <span class="boking-now-text35 PlusJakartaSans20px:SemiBold">
+                        <span>@chitetdatphongs.Sum(x => x.Phong.LoaiPhong.DonGia * x.SoNguoi).Value.ToString("N0") VNĐ /night</span>
+                    </span>
+                </div>
+                <div class="boking-now-frame131">
+                    <button class="boking-now-button" style="cursor:pointer;" onclick="sumburr();">
+                        <div class="boking-now-frame11">
+                            <span class="boking-now-text37 PlusJakartaSans16px:SemiBold">
+                                <span>Book</span>
+                            </span>
+                        </div>
+                    </button>
+                    <script>
+                        function sumburr() {
+                            $('#sumitff').click();
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

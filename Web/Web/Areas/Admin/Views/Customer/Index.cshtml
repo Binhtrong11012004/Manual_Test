@@ -1,0 +1,53 @@
+﻿@model IEnumerable<KhachHang>
+
+@{
+    ViewBag.Title = "Danh sách Khách hàng";
+    ViewBag.Controller = "Khách hàng";
+    ViewBag.General = "active";
+    ViewBag.Customer = "active";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Id = "view-null";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">@ViewBag.Title</h3>
+                <a href="/Admin/Customer/Add" class="btn btn-success pull-right">Thêm</a>
+            </div>
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Họ tên</th>
+                            <th>Số điện thoại</th>
+                            <th>Email</th>
+                            <th>Giới tính</th>
+                            <th>Ngày sinh</th>
+                            <th>CMND</th>
+                            <th class="w100">Tác vụ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.HoTen</td>
+                                <td>@item.SDT</td>
+                                <td>@item.Email</td>
+                                <td>@item.GioiTinh</td>
+                                <td>@(item.NgaySinh != null ? item.NgaySinh.Value.ToString("dd/MM/yyyy") : "")</td>
+                                <td>@item.CMTND</td>
+                                <td>
+                                    <a href="/Admin/Customer/Edit/@item.MaKhachHang" class="btn btn-info btn-sm">Sửa</a>
+                                    <a href="/Admin/Customer/Delete/@item.MaKhachHang" onclick="return confirm('Bạn chắc chắn muốn xóa mục đã chọn?')" class="btn btn-danger btn-sm">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

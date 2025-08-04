@@ -1,0 +1,394 @@
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\ApplicationInsights.config
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\csc.exe
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\System.Collections.Immutable.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\vbc.exe
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\VBCSCompiler.exe
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\VBCSCompiler.exe.config
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Web.dll.config
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Web.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Web.pdb
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Antlr3.Runtime.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Web.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.WindowsServer.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.ApplicationInsights.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Newtonsoft.Json.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Helpers.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Mvc.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Optimization.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Razor.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Deployment.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Razor.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\WebGrease.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Web.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.WindowsServer.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.ApplicationInsights.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Helpers.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Mvc.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Optimization.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Razor.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Deployment.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Razor.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Antlr3.Runtime.pdb
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\Newtonsoft.Json.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.csprojResolveAssemblyReference.cache
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.pdb
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\ApplicationInsights.config
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\csc.exe
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\System.Collections.Immutable.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\System.Reflection.Metadata.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\vbc.exe
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\VBCSCompiler.exe
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\VBCSCompiler.exe.config
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Web.dll.config
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Web.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Web.pdb
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Antlr3.Runtime.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.SqlServer.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Web.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.WindowsServer.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.ApplicationInsights.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Newtonsoft.Json.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.Mvc.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Helpers.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Mvc.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Optimization.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Razor.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Deployment.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Razor.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\WebGrease.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.SqlServer.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Web.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.WindowsServer.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.ApplicationInsights.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.Mvc.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Helpers.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Mvc.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Optimization.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Razor.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Deployment.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Razor.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Antlr3.Runtime.pdb
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\Newtonsoft.Json.xml
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.pdb
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.SqlServer.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.Mvc.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.SqlServer.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.Mvc.xml
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\CKEditor.NET.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\CKFinder.dll
+D:\Websites\TDA-WebKhachSan\Code\Web\Web\bin\CKFinder.pdb
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\CKEditor.NET.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\CKFinder.dll
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\bin\CKFinder.pdb
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.csprojAssemblyReference.cache
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
+E:\Code\Overtime\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.csproj.CopyComplete
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\ApplicationInsights.config
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\csc.exe
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\System.Collections.Immutable.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\System.Reflection.Metadata.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\vbc.exe
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\VBCSCompiler.exe
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\VBCSCompiler.exe.config
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Web.dll.config
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Web.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Web.pdb
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Antlr3.Runtime.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\CKEditor.NET.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\CKFinder.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.SqlServer.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Web.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.WindowsServer.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.ApplicationInsights.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Newtonsoft.Json.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.Mvc.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Helpers.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Mvc.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Optimization.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Razor.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Deployment.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Razor.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\WebGrease.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\CKFinder.pdb
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.SqlServer.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Web.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.WindowsServer.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.ApplicationInsights.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.Mvc.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Helpers.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Mvc.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Optimization.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Razor.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Deployment.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Razor.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Antlr3.Runtime.pdb
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Newtonsoft.Json.xml
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.csproj.AssemblyReference.cache
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.csproj.CopyComplete
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.dll
+E:\Laptop\CaNhan\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.pdb
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\ApplicationInsights.config
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\csc.exe
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\System.Collections.Immutable.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\vbc.exe
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\VBCSCompiler.exe
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\roslyn\VBCSCompiler.exe.config
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Web.dll.config
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Web.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Web.pdb
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Antlr3.Runtime.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\CKEditor.NET.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\CKFinder.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.SqlServer.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Web.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.WindowsServer.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.ApplicationInsights.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.Web.Infrastructure.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Newtonsoft.Json.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.Mvc.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Helpers.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Mvc.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Optimization.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Razor.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Deployment.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Razor.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\WebGrease.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\CKFinder.pdb
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\EntityFramework.SqlServer.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.Web.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.AI.WindowsServer.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.ApplicationInsights.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\PagedList.Mvc.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Helpers.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Mvc.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Optimization.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.Razor.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Deployment.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\System.Web.WebPages.Razor.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Antlr3.Runtime.pdb
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\bin\Newtonsoft.Json.xml
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.csproj.AssemblyReference.cache
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.csproj.CopyComplete
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.dll
+C:\GioiTV\Code\TDA-WebKhachSan123\TDA-WebKhachSan\Code\Web\Web\obj\Debug\Web.pdb
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\ApplicationInsights.config
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\csc.exe
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\vbc.exe
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Web.dll.config
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Web.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Web.pdb
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Antlr3.Runtime.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\CKEditor.NET.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\CKFinder.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\EntityFramework.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.AI.Web.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Newtonsoft.Json.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\PagedList.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\PagedList.Mvc.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.Helpers.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.Mvc.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.Optimization.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.Razor.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.WebPages.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\WebGrease.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\CKFinder.pdb
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\EntityFramework.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.AI.Web.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\PagedList.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\PagedList.Mvc.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.Helpers.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.Mvc.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.Optimization.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.Razor.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.WebPages.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\bin\Newtonsoft.Json.xml
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\obj\Debug\Web.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\obj\Debug\Web.csproj.CopyComplete
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\obj\Debug\Web.dll
+C:\Users\Admin\OneDrive\Documents\Deadline\LTWeb\DoAn\Code\Web\Web\obj\Debug\Web.pdb
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\ApplicationInsights.config
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\csc.exe
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\System.Collections.Immutable.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\System.Reflection.Metadata.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\vbc.exe
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\VBCSCompiler.exe
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\roslyn\VBCSCompiler.exe.config
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Web.dll.config
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Web.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Web.pdb
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Antlr3.Runtime.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\CKEditor.NET.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\CKFinder.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\EntityFramework.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\EntityFramework.SqlServer.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.AI.Web.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.AI.WindowsServer.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.ApplicationInsights.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Newtonsoft.Json.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\PagedList.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\PagedList.Mvc.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.Helpers.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.Mvc.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.Optimization.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.Razor.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.WebPages.Deployment.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.WebPages.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.WebPages.Razor.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\WebGrease.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\CKFinder.pdb
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\EntityFramework.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\EntityFramework.SqlServer.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.AI.DependencyCollector.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.AI.Web.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.AI.WindowsServer.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.ApplicationInsights.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\PagedList.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\PagedList.Mvc.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.Helpers.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.Mvc.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.Optimization.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.Razor.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.WebPages.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.WebPages.Deployment.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\System.Web.WebPages.Razor.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Antlr3.Runtime.pdb
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\bin\Newtonsoft.Json.xml
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\obj\Debug\Web.csproj.AssemblyReference.cache
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\obj\Debug\Web.csproj.Up2Date
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\obj\Debug\Web.dll
+E:\Kiểm định chất lượng phần mềm\DoAn\Code\Web\Web\obj\Debug\Web.pdb

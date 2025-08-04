@@ -1,0 +1,109 @@
+﻿@model PhongKhachHang
+@{
+    ViewBag.Title = "Thêm khách Phòng: " + Model.Phong.TenPhong;
+    ViewBag.Controller = "Book Phòng";
+    ViewBag.General = "active";
+    ViewBag.Booking = "active";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Id = "view-null";
+
+    var db = new WebDatPhongEntities();
+
+    var list = new List<SelectListItem>();
+    foreach (var item in db.KhachHangs.Where(x => x.MaKhachHang != Model.MaKhachHang).ToList())
+    {
+        list.Add(new SelectListItem { Value = item.MaKhachHang + "", Text = item.SDT + " - " + item.HoTen });
+    }
+}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">@ViewBag.Title</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <h3>Khách hàng đăng ký phòng</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Họ tên</th>
+                            <th>Số điện thoại</th>
+                            <th>Email</th>
+                            <th>Giới tính</th>
+                            <th>Ngày sinh</th>
+                            <th>CMND</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Model.KhachHang.HoTen</td>
+                            <td>@Model.KhachHang.SDT</td>
+                            <td>@Model.KhachHang.Email</td>
+                            <td>@Model.KhachHang.GioiTinh</td>
+                            <td>@Model.KhachHang.NgaySinh.Value.ToString("dd/MM/yyyy")</td>
+                            <td>@Model.KhachHang.CMTND</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr />
+                <h3>Khách đi kèm <a onclick="addCustomer()" class="btn btn-success pull-right">Thêm</a></h3>
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Họ tên</th>
+                            <th>Số điện thoại</th>
+                            <th>Email</th>
+                            <th>Giới tính</th>
+                            <th>Ngày sinh</th>
+                            <th>CMND</th>
+                            <th class="w100">Tác vụ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.KhachDiKems)
+                        {
+                            <tr>
+                                <td>@item.KhachHang.HoTen</td>
+                                <td>@item.KhachHang.SDT</td>
+                                <td>@item.KhachHang.Email</td>
+                                <td>@item.KhachHang.GioiTinh</td>
+                                <td>@item.KhachHang.NgaySinh.Value.ToString("dd/MM/yyyy")</td>
+                                <td>@item.KhachHang.CMTND</td>
+                                <td>
+                                    <a href="/Admin/Booking/DeleteCustomer/@item.MaKhachDiKem" onclick="return confirm('Bạn chắc chắn muốn xóa mục đã chọn?')" class="btn btn-danger btn-sm">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </div><!-- /.col -->
+</div><!-- /.row -->
+
+<div id="themKhach" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form method="post" action="/Admin/Booking/AddCustomer">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Thêm khách đi kèm</h4>
+                </div>
+                <div class="modal-body">
+                    <input name="MaPhongKhachHang" hidden value="@Model.MaPhongKhachHang" />
+                    <select required name="MaKhachHang" class="form-control">
+                        @foreach (var item in list)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Thêm</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

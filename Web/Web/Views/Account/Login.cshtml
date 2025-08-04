@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<link href="~/Content/styles/login.css" rel="stylesheet" />
+<div class="login-container" style=" margin-top: 112px;">
+    <div class="login-desktop10">
+        <img alt="Rectangle88616" src="/public/external/rectangle88616-zv9f-800w.png" class="login-rectangle8" />
+        <div class="login-group2">
+            <span class="login-text04"><span>COOMI HOTEL</span></span>
+        </div>
+        <div class="login-frame77">
+            <form class="login-frame74" action="/account/login" method="post">
+                <div class="login-frame72">
+                    <span class="login-text06 PlusJakartaSans40px:Regular">
+                        <span>LOG IN</span>
+                    </span>
+                    <div class="login-frame71">
+                        <div class="login-frame69">
+                            <div class="login-frame68" style="padding:0;">
+                                <input class="login-text08 PlusJakartaSans20px:Regular" style="padding:20px;" name="username" type="email" placeholder="Email" required />
+                            </div>
+                            <div class="login-frame691" style="padding:0;">
+                                <input class="login-text10 PlusJakartaSans20px:Regular" style="padding:20px;" name="password" type="password" placeholder="Password" required />
+                            </div>
+                        </div>
+                        <div class="login-frame70">
+                            <input type="checkbox" class="login-rectangle12" />
+                            <span class="login-text12 PlusJakartaSans20px:Regular">
+                                <span>Save password ?</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-frame73">
+                    <button class="login-button" type="submit" style="cursor:pointer;">
+                        <div class="login-frame11">
+                            <span class="login-text14 PlusJakartaSans24px:ExtraBold">
+                                <span>Log in</span>
+                            </span>
+                        </div>
+                    </button>
+                    <a href="/account/register">
+                        <button class="login-button1" type="button" style="cursor:pointer;">
+                            <div class="login-frame111">
+                                <span class="login-text16 PlusJakartaSans24px:SemiBold">
+                                    <span>Sign in</span>
+                                </span>
+                            </div>
+                            <img alt="teenyiconsarrowupsolidI861" src="/public/external/teenyiconsarrowupsolidi861-d1ml.svg" class="login-teenyiconsarrowupsolid" />
+                        </button>
+                    </a>
+                </div>
+                <p style="color: red;">@TempData["notice"]</p>
+            </form>
+            <div class="login-frame76">
+                <span class="login-text18 PlusJakartaSans16px:Regular">
+                    <span>Or quick log in with</span>
+                </span>
+                <div class="login-frame75">
+                    <a href="#">
+                        <img alt="uimgoogle1314" src="/public/external/uimgoogle1314-wxd4.svg" class="login-uimgoogle" />
+                    </a>
+                    <a href="#">
+                        <img alt="formkitfacebook1314" src="/public/external/formkitfacebook1314-u1j.svg" class="login-formkitfacebook" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

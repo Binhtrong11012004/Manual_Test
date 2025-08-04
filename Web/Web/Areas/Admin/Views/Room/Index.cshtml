@@ -1,0 +1,52 @@
+﻿@model List<Phong>
+@{
+    ViewBag.Title = "Danh sách Phòng";
+    ViewBag.Controller = "Phòng";
+    ViewBag.General = "active";
+    ViewBag.Room = "active";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Id = "view-null";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">@ViewBag.Title</h3>
+                <a href="/Admin/Room/Add" class="btn btn-success pull-right">Thêm</a>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Hình ảnh</th>
+                            <th>Loại phòng</th>
+                            <th>Tên phòng</th>
+                            <th>Vị trí</th>
+                            <th>Trạng thái</th>
+                            <th class="w100">Tác vụ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="@item.HinhAnh" width="100" />
+                                </td>
+                                <td>@item.LoaiPhong.TenLoaiPhong - @item.KhachSan.TenKhachSan</td>
+                                <td>@item.TenPhong</td>
+                                <td>@item.ViTri</td>
+                                <td>@item.TrangThai</td>
+                                <td>
+                                    <a href="/Admin/Room/Edit/@item.MaPhong" class="btn btn-info btn-sm">Sửa</a>
+                                    <a href="/Admin/Room/Delete/@item.MaPhong" onclick="return confirm('Bạn chắc chắn muốn xóa mục đã chọn?')" class="btn btn-danger btn-sm">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </div><!-- /.col -->
+</div><!-- /.row -->

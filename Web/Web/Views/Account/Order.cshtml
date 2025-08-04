@@ -1,0 +1,76 @@
+﻿@using Web.Models;
+@model List<DonDatPhong>
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/styles/booking-info.css" rel="stylesheet" />
+
+<div class="desktop9-container" style=" margin-top: 112px;">
+    <div class="desktop9-desktop9">
+        <img alt="Rectangle88614" src="/public/external/rectangle88614-4qkyp-1800h.png" class="desktop9-rectangle8" />
+        <img alt="Rectangle98614" src="/public/external/rectangle98614-xhym-1800h.png" class="desktop9-rectangle9" />
+        <form class="desktop9-frame49" method="get" action="/account/order">
+            <div class="desktop9-frame61">
+                <input class="desktop9-text PlusJakartaSans16px:SemiBold" name="name" placeholder="Searching" style="background-color: transparent;"/>
+            </div>
+            <button class="desktop9-button" type="submit" style="cursor:pointer;">
+                <div class="desktop9-frame11">
+                    <span class="desktop9-text02 PlusJakartaSans16px:SemiBold">
+                        <span>Searching</span>
+                    </span>
+                </div>
+            </button>
+        </form>
+        <div class="desktop9-frame67">
+            <div class="desktop9-frame62">
+                <span class="desktop9-text08 PlusJakartaSans20px:SemiBoldItalic">
+                    <span>Date check in</span>
+                </span>
+                <span class="desktop9-text10 PlusJakartaSans20px:SemiBoldItalic">
+                    <span>Date check out</span>
+                </span>
+                <span class="desktop9-text12 PlusJakartaSans20px:SemiBoldItalic">
+                    <span>Costumer names</span>
+                </span>
+                <span class="desktop9-text14 PlusJakartaSans20px:SemiBoldItalic">
+                    <span>Rooms</span>
+                </span>
+                <span class="desktop9-text16 PlusJakartaSans20px:SemiBoldItalic">
+                    <span>Pepople</span>
+                </span>
+                <span class="desktop9-text18 PlusJakartaSans20px:SemiBoldItalic">
+                    <span>Phone number</span>
+                </span>
+            </div>
+            <div class="desktop9-frame64">
+                @foreach (var item in Model)
+                {
+                    <a href="/account/orderdetail/@item.MaDonDatPhong" style="width: 100%;">
+                        <div class="desktop9-frame641">
+                            <span class="desktop9-text20 PlusJakartaSans16px:Regular">
+                                <span>@item.NgayDen.Value.ToString("dd/MM/yyyy")</span>
+                            </span>
+                            <span class="desktop9-text22 PlusJakartaSans16px:Regular">
+                                <span>@item.NgayDi.Value.ToString("dd/MM/yyyy")</span>
+                            </span>
+                            <span class="desktop9-text24 PlusJakartaSans16px:Regular">
+                                <span>@item.HoTen</span>
+                            </span>
+                            <span class="desktop9-text26 PlusJakartaSans16px:Regular">
+                                @item.ChiTietDonDatPhongs.Count()
+                            </span>
+                            <span class="desktop9-text27 PlusJakartaSans16px:Regular">
+                                @item.ChiTietDonDatPhongs.Sum(x => x.SoNguoi)
+                            </span>
+                            <span class="desktop9-text28 PlusJakartaSans16px:Regular">
+                                <span>@item.SoDienThoai</span>
+                            </span>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

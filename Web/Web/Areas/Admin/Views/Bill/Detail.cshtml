@@ -1,0 +1,120 @@
+﻿@model PhongKhachHang
+@{
+    ViewBag.Title = "Chi tiết hóa đơn: " + Model.MaPhongKhachHang;
+    ViewBag.Controller = "Hóa đơn";
+    ViewBag.General = "active";
+    ViewBag.Bill = "active";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Id = "view-null";
+
+    var db = new WebDatPhongEntities();
+
+    var list = new List<SelectListItem>();
+    foreach (var item in db.KhachHangs.ToList())
+    {
+        list.Add(new SelectListItem { Value = item.MaKhachHang + "", Text = item.SDT + " - " + item.HoTen });
+    }
+
+    var phong = db.Phongs.FirstOrDefault(x => x.MaPhong == Model.MaPhong);
+    var songay = ((int)(DateTime.Now - Model.NgayDen).Value.TotalDays) == 0 ? 1 : ((int)(DateTime.Now - Model.NgayDen).Value.TotalDays);
+    var sotienphong = (songay * Model.Phong.LoaiPhong.DonGia);
+    var tindichvu = Model.SuDungDichVus.Sum(x => x.DichVu.Gia * x.SoLuong);
+    var tong = sotienphong + tindichvu;
+}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">@ViewBag.Title</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <table id="thanhToan" class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Khách hàng:</td>
+                            <td>@Model.KhachHang.HoTen</td>
+                        </tr>
+                        <tr>
+                            <td>Khách đi cùng:</td>
+                            <td>
+                                <table class="table table-bordered table-striped">
+                                    <tr>
+                                        <th>Họ tên</th>
+                                        <th>Tuổi</th>
+                                    </tr>
+                                    @foreach (var item in Model.KhachDiKems)
+                                    {
+                                        <tr>
+                                            <td>@item.KhachHang.HoTen</td>
+                                            <td>@Html.Raw((int)(DateTime.Now - item.KhachHang.NgaySinh).Value.TotalDays / 365)</td>
+                                        </tr>
+                                    }
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Phòng:</td>
+                            <td>@Model.Phong.TenPhong</td>
+                        </tr>
+                        <tr>
+                            <td>Ngày vào:</td>
+                            <td>@Model.NgayDen.Value.ToShortDateString()</td>
+                        </tr>
+                        <tr>
+                            <td>Ngày ra:</td>
+                            <td>@DateTime.Now.ToShortDateString()</td>
+                        </tr>
+                        <tr>
+                            <td>Tiền phòng:</td>
+                            <td>
+                                <table class="table table-bordered table-striped">
+                                    <tr>
+                                        <th>Giá phòng (VNĐ)</th>
+                                        <th>Số ngày thuê</th>
+                                        <th>Thành tiền (VNĐ)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>@Model.Phong.LoaiPhong.DonGia.Value.ToString("N0")</td>
+                                        <td>@songay.ToString("N0")</td>
+                                        <td>@sotienphong.Value.ToString("N0")</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dịch vụ:</td>
+                            <td>
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Tên dịch vụ</th>
+                                            <th>Giá (VNĐ)</th>
+                                            <th>Số lượng</th>
+                                            <th>Thành tiền (VNĐ)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.SuDungDichVus)
+                                        {
+                                            <tr>
+                                                <td>@item.DichVu.TenDichVu</td>
+                                                <td>@item.DichVu.Gia.Value.ToString("N0")</td>
+                                                <td>@item.SoLuong</td>
+                                                <td>@Html.Raw((item.DichVu.Gia * item.SoLuong).Value.ToString("N0"))</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Tổng tiền:</th>
+                            <th>@tong.Value.ToString("N0") VNĐ</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <a onclick="printDiv('thanhToan')" class="btn btn-info">In hóa đơn</a>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </div><!-- /.col -->
+</div><!-- /.row -->

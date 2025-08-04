@@ -1,0 +1,78 @@
+﻿@model PhongKhachHang
+@{
+    ViewBag.Title = "Book Phòng";
+    ViewBag.Controller = "Book Phòng";
+    ViewBag.General = "active";
+    ViewBag.Booking = "active";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Id = "view-null";
+
+    var db = new WebDatPhongEntities();
+
+    var list = new List<SelectListItem>();
+    foreach (var item in db.KhachHangs.ToList())
+    {
+        list.Add(new SelectListItem { Value = item.MaKhachHang + "", Text = item.SDT + " - " + item.HoTen });
+    }
+
+    var phong = db.Phongs.FirstOrDefault(x => x.MaPhong == Model.MaPhong);
+}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">@ViewBag.Title</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <form action="/Admin/Booking/Book" method="post" class="form-horizontal">
+                    @Html.HiddenFor(x => x.MaPhong)
+                    @Html.AntiForgeryToken()
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Khách hàng</label>
+                            <div class="col-sm-9">
+                                @Html.DropDownListFor(x => x.MaKhachHang, list, new Dictionary<string, object>
+                                {
+                                    {"class", "form-control"}
+                                })
+                                @Html.ValidationMessageFor(x => x.MaKhachHang)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Ngày đến</label>
+                            <div class="col-sm-9">
+                                @Html.TextBoxFor(x => x.NgayDen, new Dictionary<string, object>
+                                {
+                                    {"class", "form-control datetimepicker"},
+                                    {"readonly","true"}
+                                })
+                                @Html.ValidationMessageFor(x => x.NgayDen)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Ngày dự kiến đi</label>
+                            <div class="col-sm-9">
+                                @Html.TextBoxFor(x => x.NgayDuKienDi, new Dictionary<string, object>
+                                {
+                                    {"class", "form-control datetimepicker"}
+                                })
+                                @Html.ValidationMessageFor(x => x.NgayDuKienDi)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Phòng</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" readonly value="@Html.Raw($"{phong.TenPhong} - {phong.LoaiPhong.TenLoaiPhong} - {phong.KhachSan.TenKhachSan}")" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-footer">
+                        <a href="@Url.Action("Index")" class="btn btn-default pull-left">Danh sách phòng</a>
+                        <button type="submit" class="btn btn-primary pull-right">Đặt phòng</button>
+                    </div>
+                </form>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </div><!-- /.col -->
+</div><!-- /.row -->

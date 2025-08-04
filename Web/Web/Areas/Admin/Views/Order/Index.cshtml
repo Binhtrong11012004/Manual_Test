@@ -1,0 +1,58 @@
+﻿@model List<DonDatPhong>
+@{
+    ViewBag.Title = "Danh sách Đơn đặt phòng";
+    ViewBag.Controller = "Đơn đặt phòng";
+    ViewBag.General = "active";
+    ViewBag.Order = "active";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Id = "view-null";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">@ViewBag.Title</h3>
+                <a href="/Admin/Order/Add" class="btn btn-success pull-right">Thêm</a>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Mã đơn đặt phòng</th>
+                            <th>Ngày đặt</th>
+                            <th>Ngày đến</th>
+                            <th>Ngày đi</th>
+                            <th>Thông tin khách hàng</th>
+                            <th>Trạng thái</th>
+                            <th class="w100">Tác vụ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MaDonDatPhong</td>
+                                <td>@item.NgayDatPhong.Value.ToString("dd/MM/yyyy")</td>
+                                <td>@item.NgayDen.Value.ToString("dd/MM/yyyy")</td>
+                                <td>@item.NgayDi.Value.ToString("dd/MM/yyyy")</td>
+                                <td>
+                                    <p>@item.HoTen</p>
+                                    <p>@item.SoDienThoai</p>
+                                    <p>@item.Email</p>
+                                    <p>@item.GhiChu</p>
+                                </td>
+                                <td>@item.TrangThai</td>
+                                <td>
+                                    <a href="/Admin/Order/View/@item.MaDonDatPhong" class="btn btn-info btn-sm">Chi tiết</a>
+                                    <a href="/Admin/Order/Edit/@item.MaDonDatPhong" class="btn btn-info btn-sm">Sửa</a>
+                                    <a href="/Admin/Order/Delete/@item.MaDonDatPhong" onclick="return confirm('Bạn chắc chắn muốn xóa mục đã chọn?')" class="btn btn-danger btn-sm">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </div><!-- /.col -->
+</div><!-- /.row -->

@@ -1,0 +1,44 @@
+﻿@model TinTuc
+@using PagedList.Mvc;
+@using Web.Hellper
+@using Web.Models;
+@{
+    ViewBag.News = "active";
+    var db = new WebDatPhongEntities();
+    var tintucs = db.TinTucs.Where(x => x.MaTinTuc != Model.MaTinTuc).OrderByDescending(x => x.NgayDang).Take(5).ToList();
+}
+
+@Html.Partial("_Banner")
+<div class="blog">
+    <div class="container">
+        <h2>@Model.TieuDe</h2>
+        <label>Ngày đăng: @Model.NgayDang.Value.ToString("dd-MM-yyyy")</label>
+        <hr />
+        <div class="row">
+
+            <!-- Blog Posts -->
+            <div class="col-lg-9">
+                <div class="blog_posts">
+                    @Html.Raw(Model.NoiDung)
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="sidebar">
+                    <div class="recent_posts">
+                        <div class="sidebar_title"><h4>Tin mới</h4></div>
+                        <div class="sidebar_list">
+                            <ul>
+                                @foreach (var item in tintucs)
+                                {
+                                    <li><a href="/news/detail/@item.MaTinTuc">@item.TieuDe</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

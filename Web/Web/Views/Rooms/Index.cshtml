@@ -1,0 +1,125 @@
+﻿@model List<Web.Models.Phong>
+@{
+    ViewBag.Rooms = "active";
+
+    var db = new WebDatPhongEntities();
+    var loaiphongs = db.LoaiPhongs.ToList();
+}
+
+<link href="~/Content/styles/list-rom.css" rel="stylesheet" />
+
+<div class="list-rom-container" style=" margin-top: 112px;">
+    <div class="list-rom-desktop5">
+        <img src="/public/external/rectangle97716-2vt-1500w.png" alt="Rectangle97716" class="list-rom-rectangle9" />
+        <form class="list-rom-frame49" action="/rooms" method="get">
+            <div class="list-rom-component3">
+                <div class="list-rom-frameiconcalender">
+                    <img src="/public/external/vectori806-p0kc.svg" alt="VectorI806" class="list-rom-vector" />
+                </div>
+                <div class="list-rom-frame44">
+                    <input class="list-rom-text PlusJakartaSans16px:SemiBold" type="date" name="ngaybatdau" value="@ViewBag.ngaybatdau" placeholder="Check in" style="background-color:transparent;" />
+                    <input class="list-rom-text02 PlusJakartaSans16px:SemiBold" type="date" name="ngayketthuc" value="@ViewBag.ngayketthuc" placeholder="Check out" style="background-color:transparent;" />
+                </div>
+            </div>
+            <div class="list-rom-component2">
+                <div class="list-rom-frame441">
+                    <select name="loaiphong" class="list-rom-text04 PlusJakartaSans16px:SemiBold" style="background-color:transparent; width:100%;">
+                        <option value="0">Type Room</option>
+                        @foreach (var item in loaiphongs)
+                        {
+                            if (item.MaLoaiPhong == ViewBag.loaiphong)
+                            {
+                                <option selected value="@item.MaLoaiPhong">@item.TenLoaiPhong</option>
+                            }
+                            else
+                            {
+                                <option value="@item.MaLoaiPhong">@item.TenLoaiPhong</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <button class="list-rom-button" type="submit">
+                <div class="list-rom-frame11">
+                    <span class="list-rom-text06 PlusJakartaSans16px:SemiBold">
+                        <span>Searching</span>
+                    </span>
+                </div>
+            </button>
+        </form>
+        <div class="list-rom-frame57">
+            @foreach (var item in Model)
+            {
+                <div class="list-rom-component4">
+                    <img src="@item.HinhAnh" alt="Rectangle10I135" class="list-rom-rectangle10" />
+                    <div class="list-rom-frame55">
+                        <span class="list-rom-text08 PlusJakartaSans26px:Bold">
+                            <span>@item.TenPhong</span>
+                        </span>
+                        <span class="list-rom-text10">
+                            <span>
+                                @Html.Raw(item.GioiThieu)
+                            </span>
+                        </span>
+                        <div class="list-rom-frame53">
+                            <div class="list-rom-frame50">
+                                <img src="/public/external/fluentpeople20regulari135-2f95.svg" alt="fluentpeople20regularI135" class="list-rom-fluentpeople20regular" />
+                                <span class="list-rom-text31 PlusJakartaSans20px:Regular">
+                                    <span>@item.LoaiPhong.SoNguoi People</span>
+                                </span>
+                            </div>
+                            <div class="list-rom-frame51">
+                                <div class="list-rom-solarbedlinear">
+                                    <div class="list-rom-group">
+                                        <img src="/public/external/vectori135-g6ak.svg" alt="VectorI135" class="list-rom-vector01" />
+                                        <img src="/public/external/vectori135-nme.svg" alt="VectorI135" class="list-rom-vector02" />
+                                        <img src="/public/external/vectori135-k5jp.svg" alt="VectorI135" class="list-rom-vector03" />
+                                    </div>
+                                </div>
+                                <span class="list-rom-text33 PlusJakartaSans20px:Regular">
+                                    <span>@item.LoaiPhong.SoGiuong Bed</span>
+                                </span>
+                            </div>
+                            <div class="list-rom-frame52">
+                                <img src="/public/external/streamlinetravelwayfinderstairs2stairsstaircaselefi135-8evf.svg" alt="streamlinetravelwayfinderstairs2stairsstaircaselefI135" class="list-rom-streamlinetravelwayfinderstairs2stairsstaircaselef" />
+                                <span class="list-rom-text35 PlusJakartaSans20px:Regular">
+                                    <span>@item.ViTri</span>
+                                </span>
+                            </div>
+                            <div class="list-rom-frame531">
+                                <img src="/public/external/fluentmdl2moneyi135-qn2.svg" alt="fluentmdl2moneyI135" class="list-rom-fluentmdl2money" />
+                                <span class="list-rom-text37 PlusJakartaSans20px:Regular">
+                                    <span>@item.LoaiPhong.DonGia.Value.ToString("N0") VND</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="list-rom-frame54">
+                            <form action="/booking/add" method="post" class="list-rom-button1" style="padding:0;">
+                                <input type="hidden" name="khachsan" value="@item.MaKhachSan" />
+                                <input type="hidden" name="maphong" value="@item.MaPhong" />
+                                <input type="hidden" name="url" value="" />
+                                <button style=" width: 100%; height: 100%; padding: 13px; cursor:pointer;" >
+                                    <div class="list-rom-frame111">
+                                        <span class="list-rom-text39 PlusJakartaSans16px:SemiBold">
+                                            <span>Book now</span>
+                                        </span>
+                                    </div>
+                                </button>
+                            </form>
+                            <a href="/rooms/detail/@item.MaPhong" class="list-rom-button2">
+                                <button class="list-rom-button2" style="cursor:pointer; border:none; padding:0;">
+                                    <div class="list-rom-frame112">
+                                        <span class="list-rom-text41 PlusJakartaSans16px:SemiBold">
+                                            <span>More Detail</span>
+                                        </span>
+                                    </div>
+                                    <img src="public/external/teenyiconsarrowupsolidi135-e42.svg" alt="teenyiconsarrowupsolidI135" class="list-rom-teenyiconsarrowupsolid" />
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

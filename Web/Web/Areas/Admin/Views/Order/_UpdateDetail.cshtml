@@ -1,0 +1,50 @@
+﻿@model ChiTietDonDatPhong
+@{
+    var db = new WebDatPhongEntities();
+    var list = new List<SelectListItem>();
+    foreach (var item in db.Phongs.ToList())
+    {
+        list.Add(new SelectListItem { Value = item.MaPhong + "", Text = item.TenPhong });
+    }
+
+    var listKs = new List<SelectListItem>();
+    foreach (var item in db.KhachSans.ToList())
+    {
+        listKs.Add(new SelectListItem { Value = item.MaKhachSan + "", Text = item.TenKhachSan });
+    }
+}
+@Html.HiddenFor(x => x.MaChiTiet)
+@Html.HiddenFor(x => x.MaDonDatPhong)
+
+<div class="box-body">
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Khách sạn</label>
+        <div class="col-sm-9">
+            @Html.DropDownListFor(x => x.MaKhachSan, listKs, new Dictionary<string, object>
+            {
+                {"class", "form-control"}
+            })
+            @Html.ValidationMessageFor(x => x.MaKhachSan)
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Phòng</label>
+        <div class="col-sm-9">
+            @Html.DropDownListFor(x => x.MaPhong, list, new Dictionary<string, object>
+            {
+                {"class", "form-control"}
+            })
+            @Html.ValidationMessageFor(x => x.MaPhong)
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Số người</label>
+        <div class="col-sm-9">
+            @Html.TextBoxFor(x => x.SoNguoi, new Dictionary<string, object>
+            {
+                {"class", "form-control"}
+            })
+            @Html.ValidationMessageFor(x => x.SoNguoi)
+        </div>
+    </div>
+</div>

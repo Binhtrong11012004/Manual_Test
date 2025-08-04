@@ -1,0 +1,167 @@
+﻿@model Phong
+@{
+    ViewBag.Title = "Detail";
+    var lstAnh = new List<string>();
+    if (string.IsNullOrEmpty(Model.NhomHinhAnh))
+    {
+        lstAnh.Add(Model.HinhAnh);
+    }
+    else
+    {
+        lstAnh = Model.NhomHinhAnh.Split(';').ToList();
+    }
+}
+
+<link href="~/Content/styles/rom-detail.css" rel="stylesheet" />
+
+<div class="desktop35-container" style=" margin-top: 112px;">
+    <div class="desktop35-desktop35">
+        <img src="/public/external/rectangle81647-muhp-1100h.png" alt="Rectangle81647" class="desktop35-rectangle8" />
+        <img src="/public/external/rectangle91647-qbeo-1100h.png" alt="Rectangle91647" class="desktop35-rectangle9" />
+        <div class="desktop35-picandinfo">
+            <div class="desktop35-frame88">
+                <div class="desktop35-frame90">
+                    <div class="desktop35-component15">
+                        <div class="owl-carousel owl-theme room_slider">
+                            @foreach (var item in lstAnh)
+                            {
+                                <div>
+                                    <img src="@item" style="width: 100%; height: 100%;" />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="desktop35-frame91">
+                <div class="desktop35-frame53"></div>
+                <div class="desktop35-subwayjoincornerarrow4"></div>
+                <div class="desktop35-navigationbar-roominfo">
+                    <div class="desktop35-frame104">
+                        <div class="desktop35-frame101">
+                            <div class="desktop35-frame100">
+                                <span class="desktop35-text02 PlusJakartaSans40px:Regular">
+                                    <span>@Model.TenPhong</span>
+                                </span>
+                                <span class="desktop35-text04 PlusJakartaSans26px:Bold">
+                                    <span>@Model.LoaiPhong.DonGia.Value.ToString("N0") VND</span>
+                                </span>
+                            </div>
+                            <span class="desktop35-text06 PlusJakartaSans16px:Regular">
+                                <span>
+                                    @Html.Raw(Model.GioiThieu)
+                                </span>
+                            </span>
+                        </div>
+                        <img src="/public/external/line2i164-xycu.svg" alt="Line2I164" class="desktop35-line2" />
+                        <div class="desktop35-frame102">
+                            <span class="desktop35-text08 PlusJakartaSans20px:SemiBold">
+                                <span>Details</span>
+                            </span>
+                            <div class="desktop35-frame99">
+                                <div class="desktop35-frame98">
+                                    <div class="desktop35-frame50">
+                                        <img src="/public/external/fluentpeople20regulari164-wuwo.svg" alt="fluentpeople20regularI164" class="desktop35-fluentpeople20regular" />
+                                        <span class="desktop35-text10 PlusJakartaSans16px:Regular">
+                                            <span>@Model.LoaiPhong.SoNguoi Pepople</span>
+                                        </span>
+                                    </div>
+                                    <div class="desktop35-frame51">
+                                        <div class="desktop35-solarbedlinear">
+                                            <div class="desktop35-group">
+                                                <img src="/public/external/vectori164-tncv.svg" alt="VectorI164" class="desktop35-vector" />
+                                                <img src="/public/external/vectori164-5trq.svg" alt="VectorI164" class="desktop35-vector01" />
+                                                <img src="/public/external/vectori164-3rag.svg" alt="VectorI164" class="desktop35-vector02" />
+                                            </div>
+                                        </div>
+                                        <span class="desktop35-text12 PlusJakartaSans16px:Regular">
+                                            <span>@Model.LoaiPhong.SoGiuong Bed</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="desktop35-frame97">
+                                    <div class="desktop35-frame93">
+                                        <div class="desktop35-frame95">
+                                            <div>
+                                                <img src="/public/external/Group 3.png" alt="VectorI164" class="desktop35-vector03" />
+                                            </div>
+                                        </div>
+                                        <span class="desktop35-text14">
+                                            <span>@Model.DienTich m2</span>
+                                        </span>
+                                    </div>
+                                    <div class="desktop35-frame52">
+                                        <img src="/public/external/streamlinetravelwayfinderstairs2stairsstaircaselefi164-q8uj.svg" alt="streamlinetravelwayfinderstairs2stairsstaircaselefI164" class="desktop35-streamlinetravelwayfinderstairs2stairsstaircaselef" />
+                                        <span class="desktop35-text16 PlusJakartaSans16px:Regular">
+                                            <span>@Model.ViTri</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/public/external/line3i164-htp.svg" alt="Line3I164" class="desktop35-line3" />
+                        <div class="desktop35-frame103">
+                            <span class="desktop35-text18 PlusJakartaSans20px:SemiBold">
+                                <span>Details</span>
+                            </span>
+                            <div class="desktop35-frame96">
+                                <div class="desktop35-frame911">
+                                    @foreach (var item in Model.LoaiPhong.TienNghis)
+                                    {
+                                        if (item.MaTienNghi % 2 == 1)
+                                        {
+                                            <span class="desktop35-text20 PlusJakartaSans16px:Regular">
+                                                <span>@item.TenTienNghi</span>
+                                            </span>
+                                        }
+                                    }
+                                </div>
+                                <div class="desktop35-frame92">
+                                    @foreach (var item in Model.LoaiPhong.TienNghis)
+                                    {
+                                        if (item.MaTienNghi % 2 == 0)
+                                        {
+                                            <span class="desktop35-text20 PlusJakartaSans16px:Regular">
+                                                <span>@item.TenTienNghi</span>
+                                            </span>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desktop35-frame54">
+                        <form action="/booking/add" method="post">
+                            <input type="hidden" name="khachsan" value="@Model.MaKhachSan" />
+                            <input type="hidden" name="maphong" value="@Model.MaPhong" />
+                            <input type="hidden" name="url" value="" />
+                            <button class="desktop35-button" style="cursor:pointer;">
+                                <div class="desktop35-frame11">
+                                    <span class="desktop35-text48 PlusJakartaSans16px:SemiBold">
+                                        <span>Book now</span>
+                                    </span>
+                                </div>
+                            </button>
+                        </form>
+
+                        <form action="/booking/add" method="post">
+                            <input type="hidden" name="khachsan" value="@Model.MaKhachSan" />
+                            <input type="hidden" name="maphong" value="@Model.MaPhong" />
+                            <input type="hidden" name="url" value="/rooms/detail/@Model.MaPhong" />
+                            <button class="desktop35-button1" style="cursor:pointer;">
+                                <div class="desktop35-frame111">
+                                    <span class="desktop35-text50 PlusJakartaSans16px:SemiBold">
+                                        <span>Add to cart</span>
+                                    </span>
+                                </div>
+                                <img src="/public/external/teenyiconsarrowupsolidi164-9xvi.svg" alt="teenyiconsarrowupsolidI164" class="desktop35-teenyiconsarrowupsolid" />
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

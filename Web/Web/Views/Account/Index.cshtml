@@ -1,0 +1,69 @@
+﻿@using Web.Models;
+@model KhachHang
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/styles/info.css" rel="stylesheet" />
+
+<div class="boking-now-container" style=" margin-top: 112px;">
+    <div class="boking-now-boking-now">
+        <img alt="Rectangle151652" src="/public/external/rectangle151652-uicm-1300h.png" class="boking-now-rectangle15" />
+        <div class="boking-now-sumarybill">
+            <form class="boking-now-frame125" action="/account" method="post">
+                <span class="boking-now-text PlusJakartaSans26px:Bold">
+                    <span>ACCOUNT INFORMATION</span>
+                </span>
+                <div class="boking-now-frame118">
+                    <div class="boking-now-frame116">
+                        <div class="boking-now-frame117">
+                            <span class="boking-now-text02">
+                                <span>FULL NAME</span>
+                            </span>
+                        </div>
+                        <div class="boking-now-frame61">
+                            <input class="boking-now-text04 PlusJakartaSans16px:SemiBold" name="HoTen" value="@Model.HoTen" placeholder="Type your full name" required style="border:none; background-color:transparent;">
+                        </div>
+                    </div>
+                    <div class="boking-now-frame1171">
+                        <div class="boking-now-frame1172">
+                            <span class="boking-now-text06">
+                                <span>PHONE NUMBER</span>
+                            </span>
+                        </div>
+                        <div class="boking-now-frame611">
+                            <input class="boking-now-text08 PlusJakartaSans16px:SemiBold" name="SDT" value="@Model.SDT" placeholder="Type your phone number or your local phone number" required style="border:none; background-color:transparent;">
+                        </div>
+                    </div>
+                    <div class="boking-now-frame1181">
+                        <div class="boking-now-frame1173">
+                            <span class="boking-now-text10"><span>CMND/CCCD</span></span>
+                        </div>
+                        <div class="boking-now-frame612">
+                            <input class="boking-now-text12 PlusJakartaSans16px:SemiBold" name="CMTND" value="@Model.CMTND" placeholder="Type your CMND or CCCD" style="border:none; background-color:transparent;">
+                        </div>
+                    </div>
+                    <div class="boking-now-frame131">
+                        <button class="boking-now-button" type="submit" style="cursor:pointer;">
+                            <div class="boking-now-frame11">
+                                <span class="boking-now-text37 PlusJakartaSans16px:SemiBold">
+                                    <span>Update</span>
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <p style="color: red;">@TempData["notice"]</p>
+                </div>
+            </form>
+            <div class="boking-now-bookinginfo">
+                <p><a href="/account">ACCOUNT INFORMATION</a></p>
+                <p><a href="/account/changepassword">CHANGE PASSWORD</a></p>
+                <p><a href="/account/order">BOOKING INFO</a></p>
+                <p><a href="/account/logout">LOGOUT</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+

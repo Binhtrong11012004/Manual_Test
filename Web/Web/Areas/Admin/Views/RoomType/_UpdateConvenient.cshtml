@@ -1,0 +1,16 @@
+﻿@model TienNghi
+@Html.HiddenFor(x => x.MaLoaiPhong)
+@Html.HiddenFor(x => x.MaTienNghi)
+
+<div class="box-body">
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Tên tiện nghi</label>
+        <div class="col-sm-9">
+            @Html.TextBoxFor(x => x.TenTienNghi, new Dictionary<string, object>
+            {
+                {"class", "form-control"}
+            })
+            @Html.ValidationMessageFor(x => x.TenTienNghi)
+        </div>
+    </div>
+</div>

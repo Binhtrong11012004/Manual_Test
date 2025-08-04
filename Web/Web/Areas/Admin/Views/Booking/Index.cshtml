@@ -1,0 +1,138 @@
+﻿@model SearchBooking
+@{
+    ViewBag.Title = "Book Phòng";
+    ViewBag.Controller = "Book Phòng";
+    ViewBag.General = "active";
+    ViewBag.Booking = "active";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Id = "view-null";
+
+    var db = new WebDatPhongEntities();
+    var list = new List<SelectListItem>() { new SelectListItem { Value = "", Text = "--Loại phòng--" } };
+    foreach (var item in db.LoaiPhongs.ToList())
+    {
+        list.Add(new SelectListItem { Value = item.MaLoaiPhong + "", Text = item.TenLoaiPhong });
+    }
+
+    var listKs = new List<SelectListItem>() { new SelectListItem { Value = "", Text = "--Khách sạn--" } };
+    foreach (var item in db.KhachSans.ToList())
+    {
+        listKs.Add(new SelectListItem { Value = item.MaKhachSan + "", Text = item.TenKhachSan });
+    }
+
+    var listTT = new List<SelectListItem>() {
+        new SelectListItem { Value = "", Text = "--Trạng thái--" },
+        new SelectListItem { Value = "Chưa sử dụng", Text = "Chưa sử dụng" },
+        new SelectListItem { Value = "Đang sử dụng", Text = "Đang sử dụng" },
+        new SelectListItem { Value = "Đang dọn", Text = "Đang dọn" }
+    };
+
+    var listPhong = db.Phongs.ToList();
+
+    if (Model.KhachSan > 0)
+    {
+        listPhong = listPhong.Where(x => x.MaKhachSan == Model.KhachSan).ToList();
+    }
+
+    if (Model.LoaiPhong > 0)
+    {
+        listPhong = listPhong.Where(x => x.MaLoaiPhong == Model.LoaiPhong).ToList();
+    }
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <form action="/Admin/Booking" method="get">
+                    <div class="col-sm-2">
+                        <h3 class="box-title">@ViewBag.Title</h3>
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.DropDownListFor(x => x.KhachSan, listKs, new Dictionary<string, object>
+                        {
+                            {"class", "form-control"}
+                        })
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.DropDownListFor(x => x.LoaiPhong, list, new Dictionary<string, object>
+                        {
+                            {"class", "form-control"}
+                        })
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.DropDownListFor(x => x.TrangThai, listTT, new Dictionary<string, object>
+                        {
+                            {"class", "form-control"}
+                        })
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-default">Lọc</button>
+                    </div>
+                </form>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-4"><div class="alert alert-success">Có @listPhong.Count(x => x.TrangThai == "Chưa sử dụng") phòng đang trống</div></div>
+                    <div class="col-md-4"><div class="alert alert-danger">Có @listPhong.Count(x => x.TrangThai == "Đang sử dụng") phòng đang được sử dụng</div></div>
+                    <div class="col-md-4"><div class="alert alert-warning">Có @listPhong.Count(x => x.TrangThai == "Đang dọn") phòng đang dọn</div></div>
+                </div>
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Khách sạn</th>
+                            <th>Loại phòng</th>
+                            <th>Tên phòng</th>
+                            <th>Giá (NVĐ)/Ngày</th>
+                            <th>Trạng thái</th>
+                            <th>Tác vụ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.ListPhong)
+                        {
+                            <tr>
+                                <td>@item.KhachSan.TenKhachSan</td>
+                                <td>@item.LoaiPhong.TenLoaiPhong</td>
+                                <td>@item.TenPhong</td>
+                                <td>@item.LoaiPhong.DonGia.Value.ToString("N0")</td>
+                                <td>
+                                    @if (item.TrangThai == "Chưa sử dụng")
+                                    {
+                                        <div class="label label-success">Chưa sử dụng</div>
+                                    }
+                                    @if (item.TrangThai == "Đang sử dụng")
+                                    {
+                                        <div class="label label-danger">Đang sử dụng</div>
+                                    }
+                                    @if (item.TrangThai == "Đang dọn")
+                                    {
+                                        <div class="label label-warning">Đang dọn</div>
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.TrangThai == "Chưa sử dụng")
+                                    {
+                                        <a href="/Admin/Booking/Book/@item.MaPhong" class="btn btn-info btn-sm">Đặt phòng</a>
+                                        <a href="/Admin/Booking/Clean/@item.MaPhong" class="btn btn-warning btn-sm">Dọn phòng</a>
+                                    }
+                                    @if (item.TrangThai == "Đang dọn")
+                                    {
+                                        <a href="/Admin/Booking/CleanOk/@item.MaPhong" class="btn btn-warning btn-sm">Dọn phòng xong</a>
+                                    }
+                                    @if (item.TrangThai == "Đang sử dụng")
+                                    {
+                                        <a href="/Admin/Booking/Pay/@item.PhongKhachHangs.FirstOrDefault(x => x.TrangThai == "Chờ thanh toán").MaPhongKhachHang" class="btn btn-danger btn-sm">Trả phòng</a>
+                                        <a href="/Admin/Booking/AddCustomer/@item.PhongKhachHangs.FirstOrDefault(x => x.TrangThai == "Chờ thanh toán").MaPhongKhachHang" class="btn btn-info btn-sm">Thêm KH</a>
+                                        <a href="/Admin/Booking/Service/@item.PhongKhachHangs.FirstOrDefault(x => x.TrangThai == "Chờ thanh toán").MaPhongKhachHang" class="btn btn-info btn-sm">Gọi DV</a>
+                                        <a href="/Admin/Booking/Delete/@item.PhongKhachHangs.FirstOrDefault(x => x.TrangThai == "Chờ thanh toán").MaPhongKhachHang" class="btn btn-default btn-sm">Hủy</a>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </div><!-- /.col -->
+</div><!-- /.row -->

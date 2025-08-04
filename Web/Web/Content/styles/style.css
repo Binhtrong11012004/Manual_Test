@@ -1,0 +1,213 @@
+:root {
+  --dl-color-gray-500: #595959;
+  --dl-color-gray-700: #999999;
+  --dl-color-gray-900: #D9D9D9;
+  --dl-size-size-large: 144px;
+  --dl-size-size-small: 48px;
+  --dl-color-danger-300: #A22020;
+  --dl-color-danger-500: #BF2626;
+  --dl-color-danger-700: #E14747;
+  --dl-color-gray-black: #000000;
+  --dl-color-gray-white: #FFFFFF;
+  --dl-size-size-medium: 96px;
+  --dl-size-size-xlarge: 192px;
+  --dl-size-size-xsmall: 16px;
+  --dl-space-space-unit: 16px;
+  --dl-color-primary-100: #003EB3;
+  --dl-color-primary-300: #0074F0;
+  --dl-color-primary-500: #14A9FF;
+  --dl-color-primary-700: #85DCFF;
+  --dl-color-success-300: #199033;
+  --dl-color-success-500: #32A94C;
+  --dl-color-success-700: #4CC366;
+  --dl-color-webcolors-0: rgba(255, 247, 245, 1);
+  --dl-size-size-xxlarge: 288px;
+  --dl-size-size-maxwidth: 1400px;
+  --dl-color-webcolors-200: rgba(244, 196, 182, 1);
+  --dl-color-webcolors-300: rgba(234, 168, 150, 1);
+  --dl-color-webcolors-400: rgba(219, 139, 117, 1);
+  --dl-color-webcolors-700: rgba(136, 52, 29, 1);
+  --dl-color-webcolors-900: rgba(54, 12, 0, 1);
+  --dl-radius-radius-round: 50%;
+  --dl-space-space-halfunit: 8px;
+  --dl-space-space-sixunits: 96px;
+  --dl-space-space-twounits: 32px;
+  --dl-radius-radius-radius2: 2px;
+  --dl-radius-radius-radius4: 4px;
+  --dl-radius-radius-radius8: 8px;
+  --dl-space-space-fiveunits: 80px;
+  --dl-space-space-fourunits: 64px;
+  --dl-space-space-threeunits: 48px;
+  --dl-color-hightlightcolor-0: rgba(255, 255, 255, 1);
+  --dl-space-space-oneandhalfunits: 24px;
+}
+.button {
+  color: var(--dl-color-gray-black);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+.input {
+  color: var(--dl-color-gray-black);
+  cursor: auto;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+.textarea {
+  color: var(--dl-color-gray-black);
+  cursor: auto;
+  padding: 0.5rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+.list {
+  width: 100%;
+  margin: 1em 0px 1em 0px;
+  display: block;
+  padding: 0px 0px 0px 1.5rem;
+  list-style-type: none;
+  list-style-position: outside;
+}
+.list-item {
+  display: list-item;
+}
+.teleport-show {
+  display: flex !important;
+  transform: none !important;
+}
+.PlusJakartaSans20px\:Regular {
+  font-size: 20px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.PlusJakartaSans16ps\:SemiBoildUnderline2 {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600px;
+  font-stretch: normal;
+}
+.PlusJakartaSans16px\:Regular {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.PlusJakartaSans24px\:ExtraBold {
+  font-size: 24px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 800px;
+  font-stretch: normal;
+}
+.PlusJakartaSans24px\:SemiBold {
+  font-size: 24px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600px;
+  font-stretch: normal;
+}
+.PlusJakartaSans16ps\:SemiBoildUnderline {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600px;
+  font-stretch: normal;
+}
+.PlusJakartaSans16px\:SemiBoldItalic {
+  font-size: 16px;
+  font-style: italic;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600px;
+  font-stretch: normal;
+}
+.Content {
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.15;
+  text-transform: none;
+  text-decoration: none;
+}
+.PlusJakartaSans16ps\:SemiBoildUnderline1 {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600px;
+  font-stretch: normal;
+}
+.Heading {
+  font-size: 32px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: none;
+  text-decoration: none;
+}
+.PlusJakartaSans40px\:Regular {
+  font-size: 40px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 800px;
+  font-stretch: normal;
+}
+.PlusJakartaSans20px\:SemiBold {
+  font-size: 20px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600px;
+  font-stretch: normal;
+}
+.PlusJakartaSans16px\:SemiBold {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600px;
+  font-stretch: normal;
+}
+.PlusJakartaSans52px\:extrabold {
+  font-size: 52px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 800px;
+  font-stretch: normal;
+}
+.PlusJakartaSans26px\:Regular {
+  font-size: 26px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.PlusJakartaSans16ps\:SemiBoildUnderline3 {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600px;
+  font-stretch: normal;
+}
+.PlusJakartaSans16ps\:SemiBoildUnderline4 {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600px;
+  font-stretch: normal;
+}
+.PlusJakartaSans16ps\:SemiBoildUnderline5 {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600px;
+  font-stretch: normal;
+}

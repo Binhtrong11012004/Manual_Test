@@ -1,0 +1,64 @@
+﻿@model PagedList.IPagedList<Web.Models.TinTuc>
+@using PagedList.Mvc;
+@using Web.Hellper
+@using Web.Models;
+@{
+    ViewBag.News = "active";
+    var db = new WebDatPhongEntities();
+    var tintucs = db.TinTucs.OrderByDescending(x => x.NgayDang).Take(5).ToList();
+}
+
+@Html.Partial("_Banner")
+<div class="blog">
+    <div class="container">
+        <h2>Tin tức</h2>
+        <hr />
+        <div class="row">
+
+            <!-- Blog Posts -->
+            <div class="col-lg-9">
+                <div class="blog_posts">
+                    @foreach (var item in Model)
+                    {
+                        <!-- Blog Post -->
+                        <div class="blog_post">
+                            <div class="blog_post_image">
+                                <img src="@item.HinhAnh" alt="@item.TieuDe">
+                                <div class="blog_post_date"><a href="/news/detail/@item.MaTinTuc">@item.NgayDang.Value.ToString("dd-MM-yyyy")</a></div>
+                            </div>
+                            <div class="blog_post_content">
+                                <div class="blog_post_title"><a href="/news/detail/@item.MaTinTuc">@item.TieuDe</a></div>
+                                <div class="blog_post_text">
+                                    <p>@item.NoiDung.ConvertDescriptionString()</p>
+                                </div>
+                                <div class="button blog_post_button"><a href="/news/detail/@item.MaTinTuc">Xem thêm</a></div>
+                            </div>
+                        </div>
+                    }
+
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="sidebar">
+                    <!-- Recent Posts -->
+                    <div class="recent_posts">
+                        <div class="sidebar_title"><h4>Tin mới</h4></div>
+                        <div class="sidebar_list">
+                            <ul>
+                                @foreach (var item in tintucs)
+                                {
+                                    <li><a href="/news/detail/@item.MaTinTuc">@item.TieuDe</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
